@@ -11,7 +11,14 @@ var db = level('db');
 var events = log(db);
 
 events.on('op', function(name, args, stream){
-  console.log(name, args);
+  console.log(name, args, !!stream);
+  // => "put" ["foo", "bar", function()] false
+  // => "get" ["foo", function()] false
+  // => "createReadStream" [] true
+});
+
+events.on('createReadStream', function(args, stream){
+  // ...
 });
 
 db.put('foo', 'bar', function(){
@@ -23,4 +30,10 @@ db.createReadStream();
 
 ## API
 
-### log(db)
+### var events = log(db)
+### events.on('op', fn)
+### events.on(METHOD, fn)
+
+## License
+
+  MIT
