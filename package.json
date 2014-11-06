@@ -2,10 +2,13 @@
   "name": "level-log",
   "version": "1.1.0",
   "devDependencies": {
-    "level-sublevel": "^6.3.15",
-    "memdb": "^0.2.0"
+    "memdb": "^0.2.0",
+    "tape": "^3.0.2"
   },
   "dependencies": {
     "level-manifest": "^1.2.0"
+  },
+  "scripts": {
+    "test": "make test"
   }
 }
