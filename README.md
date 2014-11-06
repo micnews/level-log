@@ -42,7 +42,19 @@ $ npm install level-log
 
 ### var events = log(db)
 ### events.on('op', fn)
-### events.on(METHOD, fn)
+
+  On every operation, call `fn` with
+
+  - method name
+  - array of arguments
+  - the stream, if one was created
+
+### events.on(method, fn)
+
+  On every call to `method`, call `fn` with
+
+  - array of arguments
+  - the stream, if one was created
 
 ## License
 
