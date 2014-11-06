@@ -3,6 +3,8 @@
 
   Log all leveldb operations.
 
+  [![build status](https://secure.travis-ci.org/micnews/level-log.svg)](http://travis-ci.org/micnews/level-log)
+
 ## Example
 
 ```js
