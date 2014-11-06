@@ -1,10 +1,12 @@
 var EventEmitter = require('events').EventEmitter;
 var createManifest = require('level-manifest');
 var slice = [].slice;
+var fwd = require('forward-events');
 
 module.exports = monitor;
 
-function monitor(db){
+function monitor(db, opts){
+  opts = opts || {};
   var events = new EventEmitter();
   var m = createManifest(db);
   if (m.methods) Object.keys(m.methods).forEach(function(name){
@@ -25,6 +27,12 @@ function monitor(db){
       }
     };
   });
+  if (m.sublevels && opts.sublevel) {
+    Object.keys(m.sublevels).forEach(function(name){
+      var sub = monitor(db.sublevel(name), { sublevel: name });
+      fwd(sub, events);
+    });
+  }
   return events;
 }
 

@@ -4,10 +4,12 @@
   "repository": "micnews/level-log",
   "description": "Log all leveldb operations",
   "devDependencies": {
+    "level-sublevel": "^6.3.15",
     "memdb": "^0.2.0",
     "tape": "^3.0.2"
   },
   "dependencies": {
+    "forward-events": "0.0.1",
     "level-manifest": "^1.2.0"
   },
   "scripts": {
