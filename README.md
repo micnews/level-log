@@ -40,7 +40,12 @@ $ npm install level-log
 
 ## API
 
-### var events = log(db)
+### var events = log(db[, opts])
+
+  Start tracking `db`. Options:
+
+  - `sublevel (Boolean)`: look into sublevels as well
+
 ### events.on('op', fn)
 
   On every operation, call `fn` with
