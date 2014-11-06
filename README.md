@@ -30,6 +30,12 @@ db.put('foo', 'bar', function(){
 db.createReadStream();
 ```
 
+## Installation
+
+```bash
+$ npm install level-log
+```
+
 ## API
 
 ### var events = log(db)
