@@ -1,6 +1,8 @@
 
 # level-log
 
+  Log all leveldb operations.
+
 ## Example
 
 ```js

@@ -1,6 +1,8 @@
 {
   "name": "level-log",
   "version": "1.1.1",
+  "repository": "micnews/level-log",
+  "description": "Log all leveldb operations",
   "devDependencies": {
     "memdb": "^0.2.0",
     "tape": "^3.0.2"
