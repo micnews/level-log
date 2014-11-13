@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "forward-events": "0.0.1",
-    "level-manifest": "^1.2.0"
+    "level-manifest": "^1.2.0",
+    "through2": "^0.6.3"
   },
   "scripts": {
     "test": "make test"
